@@ -10,4 +10,8 @@ availability: function() {
 };
 
 console.log(course.courseName + "Open: " + course.availability());
-console.log(course.enrolled + 2);
+
+course.enrolled += 2;
+console.log("Enrolled students: " + course.enrolled);
+
+console.log(course.courseName + "Open: " + course.availability());
