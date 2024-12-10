@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Personal Task Manager</h1>
+    <div class="header">
+        <h2 id="welcomeMessage">Welcome, Guest!</h2> <!-- Default message -->
+      </div>
+
+<!--Logout button-->
+    <div id="logoutButton">
+    <button onclick="logout()" class="logout-button">Logout</button>
+    </div>
+
+<!-- Adding Tasks-->
+      <button onclick="showAlert()">Add Task</button>
+    <ul id="taskList"></ul>
+
+
+  <script src="script.js"></script>
+  <script>
+    // Get the username from localStorage
+    const username = localStorage.getItem("username");
+
+    // If username exists, update the welcome message
+    if (username) {
+      document.getElementById("welcomeMessage").textContent = `Welcome, ${username}!`;
+    }
+  </script>
+</body>
+</html>
